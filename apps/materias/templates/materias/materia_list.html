@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+ {% block content %}
+{% include 'core/menu.html' %}
+    <main class="principal">
+        <div class="conteudo">
+            <nav class="modulos">
+                {% for materia in materias %}
+                <div class="modulo vermelho">
+                    <h3>Matéria: {{ materia.nome_materia }}</h3>
+                    <ul>
+                        <li>
+                            <P>{{ materia.descricao }}</P>
+                        </li>
+                            <a href="{% url 'upd_materia' materia.pk %}" ><img src="{% static 'image/atualizar.png' %}" width="50" height="50"></a>
+                            <a href="{% url 'del_materia' materia.pk %}" ><img src="{% static 'image/deletar.png' %}" width="50" height="50"></a>
+                    </ul>
+                </div>
+                {% endfor %}
+            </nav>
+        </div>
+    </main>
+{% include 'core/footer.html' %}
+{% endblock %}

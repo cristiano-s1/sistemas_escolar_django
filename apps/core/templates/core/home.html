@@ -1,0 +1,31 @@
+<main class="principal">
+    <div class="conteudo">
+        {% if request.user.is_authenticated %}
+
+            <h2 style="color: blue" class="text-center">Olá {{user}}, Seja bem vindo!</h2>
+                <br>
+            <h3 style="color: blue" class="text-center">--- Sistema Escolar ---</h3>
+                <br>
+            <p style="color: blue" class="text-center">Pioneiro na Educação de Jovens e Adultos em Osasco e região,
+                com cursos devidamente autorizados pelo Ministério da Educação e Cultura (MEC).</p>
+                <br>
+            <h2 style="color: blue" class="text-center">{{data}}</h2>
+
+        {% else %}
+            <div class = "container">
+            <div class="wrapper">
+                <form action="{% url 'login' %}" method="post" name="Login_Form" class="form-signin">
+                    {% csrf_token %}
+                    <h3 class="form-signin-heading"style="color: white">Entre com seu login</h3>
+                    <hr class="colorgraph"><br>
+
+                    <input type="text" id="username" class="form-control" name="username" placeholder="Usuário" required="" autofocus="" />
+                    <input type="password" id="password" class="form-control" name="password" placeholder="Senha" required=""/>
+
+                    <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="submit">Login</button>
+                </form>
+            </div>
+            </div>
+        {% endif %}
+    </div>
+</main>

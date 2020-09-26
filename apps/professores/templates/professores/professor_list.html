@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+ {% block content %}
+{% include 'core/menu.html' %}
+    <main class="principal">
+        <div class="conteudo">
+            <nav class="modulos">
+                {% for professor in professores %}
+                <div class="modulo roxo">
+                    <h3>Professor: {{ professor.Funcionario }}</h3>
+                    <ul>
+                        <li>
+                            <P>Materias: {{ professor.Materia }}</P>
+                            <P>Aulas: {{ professor.numero_aulas }}</P>
+                        </li>
+                            <a href="{% url 'upd_professor' professor.pk %}" ><img src="{% static 'image/atualizar.png' %}" width="50" height="50"></a>
+                            <a href="{% url 'del_professor' professor.pk %}" ><img src="{% static 'image/deletar.png' %}" width="50" height="50"></a>
+                    </ul>
+                </div>
+                {% endfor %}
+            </nav>
+        </div>
+    </main>
+{% include 'core/footer.html' %}
+{% endblock %}

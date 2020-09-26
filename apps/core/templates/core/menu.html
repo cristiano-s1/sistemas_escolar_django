@@ -1,0 +1,60 @@
+{% load static %}
+<header class="cabecalho">
+
+    <h1>Escola Python Brasil</h1><br>
+
+    <nav>
+        <div class="btn-group btn-group-primary">
+                <button class="btn btn-primary btn-sm" type="button">Funcionários</button>
+                <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" >
+                <span class="sr-only"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="{% url 'add_funcionarios' %}">Cadastrar</a></li>
+                <li><a href="{% url 'funcionarios_list' %}">Listar</a></li>
+             </ul>
+        </div>
+
+        <div class="btn-group btn-group-primary">
+                <button class="btn btn-primary btn-sm" type="button">Professores</button>
+                <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" >
+                <span class="sr-only"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="{% url 'add_professor' %}">Cadastrar</a></li>
+                <li><a href="{% url 'professor_list' %}">Listar</a></li>
+             </ul>
+        </div>
+
+        <div class="btn-group btn-group-primary">
+                <button class="btn btn-primary btn-sm" type="button">Alunos</button>
+                <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" >
+                <span class="sr-only"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="{% url 'add_aluno' %}">Cadastrar</a></li>
+                <li><a href="{% url 'aluno_list' %}">Listar</a></li>
+             </ul>
+        </div>
+
+        <div class="btn-group btn-group-primary">
+                <button class="btn btn-primary btn-sm" type="button">Matérias</button>
+                <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" >
+                <span class="sr-only"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="{% url 'add_materia' %}">Cadastrar</a></li>
+                <li><a href="{% url 'materia_list' %}">Listar</a></li>
+             </ul>
+        </div>
+
+        <div class="btn-group btn-group-primary">
+                <button class="btn btn-primary btn-sm" type="button">Truma</button>
+                <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" >
+                <span class="sr-only"></span></button>
+            <ul class="dropdown-menu">
+               <li><a href="{% url 'add_turma' %}">Cadastrar</a></li>
+                <li><a href="{% url 'turma_list' %}">Listar</a></li>
+             </ul>
+        </div>
+
+        <a class="btn btn-warning" href="{% url 'logout' %}" role="button">Sair</a>
+        <a href="{% url 'index' %}"><img src="{% static 'image/python1.png' %}" width="50" height="50"></a>
+    </nav>
+</header>
