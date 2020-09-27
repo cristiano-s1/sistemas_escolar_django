@@ -27,6 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['sistemaescolar-cc.herokuapp.com']
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'apps.alunos',
     'apps.turmas',
     'bootstrap4',
+    'stdimage',
 ]
 
 MIDDLEWARE = [
