@@ -1,0 +1,13 @@
+
+<form action="{% url 'login' %}" method="post" name="Login_Form" class="form-signin">
+    {% csrf_token %}
+    <h3 class="form-signin-heading"style="color: white">Entre com seu login</h3>
+    <hr class="colorgraph"><br>
+
+    <input type="text" id="username" class="form-control" name="username" placeholder="Usuário" required="" autofocus="" />
+    <input type="password" id="password" class="form-control" name="password" placeholder="Senha" required=""/>
+
+    <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="submit">Login</button>
+</form>
+
+

@@ -4,6 +4,7 @@
     <h1>Escola Python Brasil</h1><br>
 
     <nav>
+        {% if request.user.is_authenticated %}
         <div class="btn-group btn-group-primary">
                 <button class="btn btn-primary btn-sm" type="button">Funcionários</button>
                 <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" >
@@ -55,6 +56,7 @@
         </div>
 
         <a class="btn btn-warning" href="{% url 'logout' %}" role="button">Sair</a>
+        {% endif%}
         <a href="{% url 'index' %}"><img src="{% static 'core/image/python1.png' %}" width="50" height="50"></a>
     </nav>
 </header>

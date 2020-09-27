@@ -5,6 +5,7 @@ from datetime import datetime
 def index(request):
     now = datetime.now()
     data = now
+
     context = {
         'data': data
     }
