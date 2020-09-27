@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'core/base.html' %}
 {% load static %}
  {% block content %}
 {% include 'core/menu.html' %}
@@ -16,8 +16,8 @@
                             <P>Telefone: {{ funcionario.telefone }}</P>
                             <P>Salario: R$ {{ funcionario.salario }}</P>
                         </li>
-                            <a href="{% url 'upd_funcionarios' funcionario.pk %}" ><img src="{% static 'image/atualizar.png' %}" width="50" height="50"></a>
-                            <a href="{% url 'del_funcionarios' funcionario.pk %}" ><img src="{% static 'image/deletar.png' %}" width="50" height="50"></a>
+                            <a href="{% url 'upd_funcionarios' funcionario.pk %}" ><img src="{% static 'core/image/atualizar.png' %}" width="50" height="50"></a>
+                            <a href="{% url 'del_funcionarios' funcionario.pk %}" ><img src="{% static 'core/image/deletar.png' %}" width="50" height="50"></a>
                     </ul>
                 </div>
                 {% endfor %}

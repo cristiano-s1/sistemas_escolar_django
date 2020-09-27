@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'core/base.html' %}
 {% load static %}
  {% block content %}
 {% include 'core/menu.html' %}
@@ -12,8 +12,8 @@
                         <li>
                             <P>{{ materia.descricao }}</P>
                         </li>
-                            <a href="{% url 'upd_materia' materia.pk %}" ><img src="{% static 'image/atualizar.png' %}" width="50" height="50"></a>
-                            <a href="{% url 'del_materia' materia.pk %}" ><img src="{% static 'image/deletar.png' %}" width="50" height="50"></a>
+                            <a href="{% url 'upd_materia' materia.pk %}" ><img src="{% static 'core/image/atualizar.png' %}" width="50" height="50"></a>
+                            <a href="{% url 'del_materia' materia.pk %}" ><img src="{% static 'core/image/deletar.png' %}" width="50" height="50"></a>
                     </ul>
                 </div>
                 {% endfor %}

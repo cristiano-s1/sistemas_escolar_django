@@ -27,7 +27,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['sistemaescolar-cc.herokuapp.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
