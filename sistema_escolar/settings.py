@@ -25,7 +25,7 @@ SECRET_KEY = '(tig#$r=wt)#e9h&ep**oo#05%)y=yj!f$q0i6c(70cswaiot#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['sistemaescolar-cc.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
